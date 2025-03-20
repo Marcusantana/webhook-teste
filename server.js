@@ -26,12 +26,7 @@ app.post('/webhook', (req, res) => {
             valor = 12999.99;
             responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
-        
-        else if (userQuery.includes("qatsi") || userQuery.includes("duvell") || userQuery.includes("regius")) {  
-            valor = 30999.99;
-            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
-        }
-            
+
         else if (userQuery.includes("7")) {  
             valor = 38999.99;
             responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
@@ -44,6 +39,11 @@ app.post('/webhook', (req, res) => {
 
         else if (userQuery.includes("custom shop")) {  
             valor = 59999.99;
+            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
+        }
+        
+        else if (userQuery.includes("qatsi") || userQuery.includes("duvell") || userQuery.includes("regius")) {  
+            valor = 30999.99;
             responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
 
