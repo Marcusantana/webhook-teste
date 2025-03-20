@@ -24,44 +24,36 @@ app.post('/webhook', (req, res) => {
 
         if (userQuery === ("mayones")) {  //MAYONES
             valor = 8499.99;
-            responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
-            responseText = `Os valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
+            responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
 
         else if (userQuery.includes("qatsi 7")) {  
             valor = 23999.99;
-            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
-            responseText = `Os valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
+            responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
 
         else if (userQuery.includes("v2")) {  
             valor = 39999.99;
-            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
-            responseText = `Os valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
+            responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
             
         else if (userQuery.includes("7")) {  
             valor = 28999.99;
-            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
-            responseText = `Os valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
+            responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
 
          else if (userQuery.includes("dirty") || userQuery.includes("dirty")) {  
             valor = 32999.99;
-            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
-             responseText = `Os valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
-        }
+            responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
 
         else if (userQuery.includes("custom shop")) {  
             valor = 49999.99;
-            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
-            responseText = `Os valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
+            responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
         
         else if (userQuery.includes("qatsi") || userQuery.includes("duvell") || userQuery.includes("regius")) {  
             valor = 20999.99;
-            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
-            responseText = `Os valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
+            responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
 
         
