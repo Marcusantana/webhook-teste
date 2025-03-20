@@ -12,15 +12,19 @@ app.post('/webhook', (req, res) => {
     // Exibir a requisição recebida
     console.log('Requisição recebida: ', req.body);
 
-    // Verifique o nome completo da intenção enviada do Dialogflow
+    // Verifique o nome da intenção enviada do Dialogflow
     const intent = req.body.queryResult.intent.displayName;
+    var userQuery = request.body.queryResult.queryText;
 
     // Responder ao Dialogflow com base na intenção
     let responseText = 'Desculpe, não entendi sua pergunta.';
+    if (intent === 'ModelosGuitarras') {
+        var valor = 0;
 
-    // Verifique se é a follow-up intent correta
-    if (intent === 'Saudação - Opção 1 - EscolhaEquipamento - ModeloEquipamento') {
-        responseText = 'guitarraskkkkkkkk (follow-up intent)';
+         if (userQuery.includes.toLowerCase()===("mayones qatsi")) {
+             valor = 30999.99
+            responseText = 'Bela escolha! A guitarra' +userQuery.toUpperCase()+ 'começa com o valor de: '+valor;
+         }
     } else if (intent === 'Despedida') {
         responseText = 'Até logo!';
     }
@@ -35,3 +39,8 @@ app.post('/webhook', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
+
+function formatarMoeda(valor) {
+  return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
+}
+
