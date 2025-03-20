@@ -17,7 +17,7 @@ app.post('/webhook', (req, res) => {
 
     // Responder ao Dialogflow com base na intenção
     let responseText = 'Desculpe, não entendi sua pergunta.';
-       if (intent === 'Saudação - Opção 1 - EscolhaEquipamento - Modelo') {
+       if (intent === 'Saudacao - Opcao 1 - EscolhaEquipamento - Modelo') {
         responseText = 'Você escolheu o modelo de equipamento!';
     }
     // Enviar resposta para o Dialogflow
