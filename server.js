@@ -76,7 +76,7 @@ app.post('/webhook', (req, res) => {
 
 
 
-        if (userQuery === ("strandberg")) {  //STRANDBERG
+        if (userQuery === ("strandberg")||userQuery === ("strandberg borden")) {  //STRANDBERG
             valor = 8614.99;
             responseText = `Ótimo! Como você não especificou o modelo, o seu instrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
