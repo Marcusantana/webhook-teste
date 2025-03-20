@@ -19,7 +19,7 @@ app.post('/webhook', (req, res) => {
     // Responder ao Dialogflow com base na intenção
     let responseText = 'Desculpe, não entendi sua pergunta.';
     
-    if (intent === 'ModelosGuitarras') {
+    if (intent === 'Modelos') {
         var valor = 0;
 
         if (userQuery === ("mayones")) {  //MAYONES
@@ -29,27 +29,27 @@ app.post('/webhook', (req, res) => {
         
         else if (userQuery.includes("qatsi") || userQuery.includes("duvell") || userQuery.includes("regius")) {  
             valor = 30999.99;
-            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
             
         else if (userQuery.includes("duvell 6")) {  
             valor = 35999.99;
-            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
             
         else if (userQuery.includes("duvell 7")) {  
             valor = 38999.99;
-            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
 
          else if (userQuery.includes("duvell 6 dirty") || userQuery.includes("duvell 7 dirty")) {  
             valor = 42999.99;
-            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
 
         else if (userQuery.includes("custom shop")) {  
             valor = 59999.99;
-            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
 
         
