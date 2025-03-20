@@ -17,7 +17,7 @@ app.post('/webhook', (req, res) => {
     var userQuery = req.body.queryResult.queryText.toLowerCase(); // Correção aqui!
 
     // Responder ao Dialogflow com base na intenção
-    let responseText = 'Não captei.';
+    let responseText = 'O modelo digitado não foi encontrado pelo nosso sistema. Provavelmente o modelo esta disponível no Brasil, para mais informações acesse a página de encomendas e fale com um dos nossos vendedores por e-mail.';
     
     if (intent === 'Modelos') {
         var valor = 0;
@@ -153,10 +153,43 @@ app.post('/webhook', (req, res) => {
         }
 
         else if (userQuery.includes("aristides t/0")||userQuery.includes("aristides T/0")||userQuery.includes("aristides T")||userQuery.includes("aristides t")) {  
-            valor = 16714.99;
+            valor = 13744.99;
              responseText = `Perfeito! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
+
+
         
+
+         if (userQuery === ("ibanez")) {  //IBANEZ
+            valor = 4169.99;
+            responseText = `Ótimo! Como você não especificou o modelo, o seu instrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e as SIGNATURE).`;
+        }
+
+          else if (userQuery.includes("azs")) {  
+            valor = 13224.99;
+            responseText = `Sábia escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e as SIGNATURE).`;
+        }
+
+          else if (userQuery.includes("rgdms")) {  
+            valor = 7934.99;
+            responseText = `Sábia escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e as SIGNATURE).`;
+        }
+          else if (userQuery.includes("rgd")) {  
+            valor = 4959.99;
+            responseText = `Sábia escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e as SIGNATURE).`;
+        }
+          else if (userQuery.includes("x")) {  
+            valor = 7279.99;
+            responseText = `Sábia escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e as SIGNATURE).`;
+        }
+          else if (userQuery.includes("iceman")) {  
+            valor = 4169.99;
+            responseText = `Sábia escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e as SIGNATURE).`;
+        }
+          else if (userQuery.includes("signature")) {  
+            valor = 6614.99;
+            responseText = `Sábia escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e as SIGNATURE).`;
+        }
     
         
     } else if (intent === 'Despedida') {
