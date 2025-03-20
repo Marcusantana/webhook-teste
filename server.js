@@ -27,6 +27,16 @@ app.post('/webhook', (req, res) => {
             responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
 
+        else if (userQuery.includes("qatsi 7")) {  
+            valor = 33999.99;
+            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
+        }
+
+        else if (userQuery.includes("v2")) {  
+            valor = 49999.99;
+            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
+        }
+            
         else if (userQuery.includes("7")) {  
             valor = 38999.99;
             responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
