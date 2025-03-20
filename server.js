@@ -14,25 +14,24 @@ app.post('/webhook', (req, res) => {
 
     // Verifique o nome da intenção enviada do Dialogflow
     const intent = req.body.queryResult.intent.displayName;
-    var userQuery = request.body.queryResult.queryText;
+    var userQuery = req.body.queryResult.queryText.toLowerCase(); // Correção aqui!
 
     // Responder ao Dialogflow com base na intenção
     let responseText = 'Desculpe, não entendi sua pergunta.';
+    
     if (intent === 'ModelosGuitarras') {
         var valor = 0;
 
-         if (userQuery.includes.toLowerCase()===("mayones qatsi")) {
-             valor = 30999.99
-            responseText = 'Bela escolha! A guitarra' +userQuery.toUpperCase()+ 'começa com o valor de: '+valor;
-         }
+        if (userQuery.includes("mayones qatsi")) {  // Correção aqui!
+            valor = 30999.99;
+            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+        }
     } else if (intent === 'Despedida') {
         responseText = 'Até logo!';
     }
 
     // Enviar resposta para o Dialogflow
-    return res.json({
-        fulfillmentText: responseText
-    });
+    return res.json({ fulfillmentText: responseText });
 });
 
 // Iniciar o servidor
@@ -40,7 +39,7 @@ app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
 
+// Função para formatar moeda corretamente
 function formatarMoeda(valor) {
   return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
 }
-
