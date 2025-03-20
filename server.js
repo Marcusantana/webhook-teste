@@ -76,7 +76,7 @@ app.post('/webhook', (req, res) => {
 
 
 
-        if (userQuery === ("strandberg")||userQuery === ("strandberg borden")) {  //STRANDBERG
+        if (userQuery === ("strandberg")) {  //STRANDBERG
             valor = 8614.99;
             responseText = `Ótimo! Como você não especificou o modelo, o seu instrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
@@ -104,6 +104,11 @@ app.post('/webhook', (req, res) => {
         else if (userQuery.includes("boden true temperament")) {  
             valor = 33134.99;
             responseText = `Sábia escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
+        }
+
+       else if (userQuery.includes("strandberg boden")) {  
+            valor = 8614.99;
+            responseText = `Ótimo! Como você não especificou o modelo, o seu instrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
             
     
