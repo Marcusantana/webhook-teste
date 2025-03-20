@@ -32,17 +32,12 @@ app.post('/webhook', (req, res) => {
             responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
             
-        else if (userQuery.includes("duvell 6")) {  
-            valor = 35999.99;
-            responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
-        }
-            
-        else if (userQuery.includes("duvell 7")) {  
+        else if (userQuery.includes("7")) {  
             valor = 38999.99;
             responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
 
-         else if (userQuery.includes("duvell 6 dirty") || userQuery.includes("duvell 7 dirty")) {  
+         else if (userQuery.includes("dirty") || userQuery.includes("dirty")) {  
             valor = 42999.99;
             responseText = `Bela escolha! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
         }
