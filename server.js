@@ -22,10 +22,37 @@ app.post('/webhook', (req, res) => {
     if (intent === 'ModelosGuitarras') {
         var valor = 0;
 
-        if (userQuery.includes("mayones qatsi")) {  // Correção aqui!
+        if (userQuery === ("mayones")) {  //MAYONES
+            valor = 12999.99;
+            responseText = `Ótimo! Como você não espeficou o modelo o seu intrumento, as guitarras da ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)}`;
+        }
+        
+        else if (userQuery.includes("qatsi") || userQuery.includes("duvell") || userQuery.includes("regius")) {  
             valor = 30999.99;
             responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
         }
+            
+        else if (userQuery.includes("duvell 6")) {  
+            valor = 35999.99;
+            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+        }
+            
+        else if (userQuery.includes("duvell 7")) {  
+            valor = 38999.99;
+            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+        }
+
+         else if (userQuery.includes("duvell 6 dirty") || userQuery.includes("duvell 7 dirty")) {  
+            valor = 42999.99;
+            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+        }
+
+        else if (userQuery.includes("custom shop")) {  
+            valor = 59999.99;
+            responseText = `Bela escolha! A guitarra ${userQuery.toUpperCase()} começa com o valor de: ${formatarMoeda(valor)}`;
+        }
+
+        
     } else if (intent === 'Despedida') {
         responseText = 'Até logo!';
     }
