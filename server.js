@@ -146,6 +146,17 @@ app.post('/webhook', (req, res) => {
             valor = 16174.99;
              responseText = `Perfeito! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
         }
+
+        else if (userQuery.includes("aristides h/09")||userQuery.includes("aristides H/09")) {  
+            valor = 16714.99;
+             responseText = `Perfeito! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
+        }
+
+        else if (userQuery.includes("aristides t/09")||userQuery.includes("aristides T/0")) {  
+            valor = 13744.99;
+             responseText = `Perfeito! As guitarras ${userQuery.toUpperCase()} começam com o valor de: ${formatarMoeda(valor)} \nOs valores dos instrumentos estão sujeitos a alteração com os impostos de importação e as mudanças e upgrades no instrumento (tanto standard e os CUSTOM SHOP).`;
+        }
+        
     
         
     } else if (intent === 'Despedida') {
